@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://d3rve3tksa3yq"]
+
+[ext_resource type="Texture2D" uid="uid://dhkai4dqt2446" path="res://charracter.png" id="1_wmh5f"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Polygon2D" type="Polygon2D" parent="Node2D"]
+position = Vector2(-160.667, -430)
+texture = ExtResource("1_wmh5f")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(112, 292, 124, 249, 163, 263, 168, 320, 160, 350, 130, 356, 107, 331)
+uv = PackedVector2Array(112, 292, 124, 249, 163, 263, 168, 320, 160, 350, 130, 356, 107, 331)
+bones = ["Bone2D", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0), "Bone2D/Bone2D", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5), "Bone2D/Bone2D/Bone2D", PackedFloat32Array(0, 0, 0, 0, 0, 0, 0)]
+
+[node name="Polygon2D2" type="Polygon2D" parent="Node2D"]
+position = Vector2(-156.667, -467)
+texture = ExtResource("1_wmh5f")
+skeleton = NodePath("../Skeleton2D")
+polygon = PackedVector2Array(105.291, 425.397, 106.878, 359.259, 146.561, 359.259, 144.974, 475.661, 72.4868, 472.487, 66.6667, 434.392)
+uv = PackedVector2Array(105.291, 425.397, 106.878, 359.259, 146.561, 359.259, 144.974, 475.661, 72.4868, 472.487, 66.6667, 434.392)
+bones = ["Bone2D", PackedFloat32Array(0, 0, 0, 0, 0, 0), "Bone2D/Bone2D", PackedFloat32Array(0, 0, 0, 0, 0, 0), "Bone2D/Bone2D/Bone2D", PackedFloat32Array(0.5, 0.5, 0.5, 0.5, 0.5, 0.5)]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Node2D"]
+
+[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D"]
+position = Vector2(1, -160)
+rest = Transform2D(1, 0, 0, 1, 1, -160)
+
+[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D/Bone2D"]
+position = Vector2(-24, 8)
+rest = Transform2D(1, 0, 0, 1, -24, 8)
+
+[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D/Bone2D/Bone2D"]
+position = Vector2(-3, 59)
+rest = Transform2D(1, 0, 0, 1, -3, 59)
+auto_calculate_length_and_angle = false
+length = 70.0
+bone_angle = 90.0
